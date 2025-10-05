@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Aluno Samara Moreira | 02</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+
+        }
+        .box-nav{
+            background-color: gold;
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .box{
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            padding: 15px;
+            border-radius: 15px;
+            color: white;
+        }
+        input{
+            padding: 10px;
+            border: none;
+            outline:none;
+            border-radius: 10px;
+            font-size: 15px;
+            width: 50%;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            outline: none;
+            width: 50%;
+            background-color: slateblue;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:hover{
+            background-color: cornflowerblue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box-nav">
+        <h1>EXERCÍCIO #02</h1>
+        <h2>Trabalho de Algoritmos</h2>
+    </div>
+    <div class="box">
+        <p>Leia um valor em reais e calcule o valor do imposto sobre os rendimentos.</p>
+        <input type="number" id='salario' class="num" placeholder="Digite seu salário em reais.">
+        <br><br>
+        <button onclick="calcularImposto()">Enviar</button>
+    </div>
+</body>
+     <script>
+        function calcularImposto() {
+            var salario = parseFloat(document.getElementById("salario").value);
+
+            if (salario <= 2259.20) {
+                calculo = 0;
+            } else if (salario >= 2259.21 && salario <= 2826.65) {
+                calculo = salario * 0.075 - 169.44;
+            } else if (salario >= 2826.66 && salario <= 3751.05) {
+                calculo = salario * 0.15 - 381.44;
+            } else if (salario >= 3751.06 && salario <= 4664.68) {
+                calculo = salario * 0.225 - 662.77;
+            } else if (salario > 4664.68) {
+                calculo = salario * 0.275 - 896.00;
+            }
+            console.log(calculo);
+            alert("O imposto devido é: R$ " + calculo.toFixed(2));
+        }
+    </script>
+</html>

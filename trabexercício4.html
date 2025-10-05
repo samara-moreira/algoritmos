@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Aluno Samara Moreira | 04</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+
+        }
+        .box-nav{
+            background-color: gold;
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .box{
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            padding: 15px;
+            border-radius: 15px;
+            color: white;
+        }
+        input{
+            padding: 10px;
+            border: none;
+            outline:none;
+            border-radius: 10px;
+            font-size: 15px;
+            width: 50%;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            outline: none;
+            width: 50%;
+            background-color: slateblue;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:hover{
+            background-color: cornflowerblue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box-nav">
+        <h1>EXERCÍCIO #04</h1>
+        <h2>Trabalho de Algoritmos</h2>
+    </div>
+    <div class="box">
+        <p>Faça um algoritmo que calcule o volume de uma sala.</p>
+        <input type="number" id="largura" placeholder="Digite a largura em metros">
+        <br><br>
+        <input type="number" id="comprimento" placeholder="Digite o comprimento em metros">
+        <br><br>
+        <input type="number" id="altura" placeholder="Digite a altura em metros">
+        <br><br>
+        <button onclick="calcularVolume()">Enviar</button>
+    </div>
+</body>
+    <script>
+   function calcularVolume() {
+            var largura = parseFloat(document.getElementById("largura").value);
+            var comprimento = parseFloat(document.getElementById("comprimento").value);
+            var altura = parseFloat(document.getElementById("altura").value);
+            var volume = largura * comprimento * altura;
+            alert("O volume da sala é: " + volume.toFixed(2) + " metros cúbicos.");
+        }
+    </script>
+</html>

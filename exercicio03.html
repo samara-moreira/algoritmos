@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Aluna Samara Moreira | 03</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+
+        }
+        .box-nav{
+            background-color: gold;
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .box{
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top:60%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            padding: 15px;
+            border-radius: 15px;
+            color: white;
+        }
+        input{
+            padding: 10px;
+            border: none;
+            outline:none;
+            border-radius: 10px;
+            font-size: 15px;
+            width: 50%;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            outline: none;
+            width: 50%;
+            background-color: slateblue;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:hover{
+            background-color: cornflowerblue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box-nav">
+        <h1>EXERCÍCIO #03</h1>
+        <h2>Trabalho de Algoritmos</h2>
+    </div>
+    <div class="box">
+        <p> Construa um algoritmo em JAVASCRIPT que determine (imprima) se um dado número N
+            inteiro (recebido através do teclado) é PAR ou ÍMPAR. </p>
+        <input type="number" id='nmr' placeholder="Digite um número"><br>
+        <br><br>
+            <button onclick="verificar()">Enviar</button>
+        </div>
+    </div>
+</body>
+    <script>
+function verificar() {
+    let numero = parseFloat(document.getElementById('nmr').value);
+    if (isNaN(numero)) {
+        alert("Por favor, digite um número válido.");
+        return;
+        }
+
+        if (numero % 2 === 0) {
+        alert("O número " + numero + " é PAR.");
+        } else {
+        alert("O número " + numero + " é ÍMPAR.");
+        }
+        }
+</script>
+        </html>

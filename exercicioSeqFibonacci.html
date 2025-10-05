@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Aluno Samara Moreira | AVULSO</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+
+        }
+        .box-nav{
+            background-color: gold;
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .box{
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top:60%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            padding: 15px;
+            border-radius: 15px;
+            color: white;
+        }
+        input{
+            padding: 10px;
+            border: none;
+            outline:none;
+            border-radius: 10px;
+            font-size: 15px;
+            width: 50%;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            outline: none;
+            width: 50%;
+            background-color: slateblue;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:hover{
+            background-color: cornflowerblue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box-nav">
+        <h1>EXERCÍCIO #AVULSO</h1>
+        <h2>Disciplina de Algoritmos</h2>
+    </div>
+    <div class="box">
+        <p> </p>
+        <input type="number" id='numero' placeholder="Digite o número"><br>
+            <br><br>
+            <button onclick="nEnesimo()">Enviar</button>
+        </div>
+    </div>
+</body>
+    <script>
+    function nEnesimo() {
+        var n = parseInt(document.getElementById('numero').value);
+        if (isNaN(n) || n < 0) {
+            alert("Digite um número inteiro positivo.");
+            return;
+        }
+
+        let a = 0;
+        let b = 1;
+
+        for (let i = 0; i < n; i++) {
+            let soma = a + b;
+            a = b;
+            b = soma;
+        }
+
+        alert("O " + n + "º número da sequência de Fibonacci é: " + a);
+    }
+</script>
+        </html>

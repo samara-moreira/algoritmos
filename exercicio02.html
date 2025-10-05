@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Aluna Samara Moreira | 02</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+
+        }
+        .box-nav{
+            background-color: gold;
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .box{
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top:60%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            padding: 15px;
+            border-radius: 15px;
+            color: white;
+        }
+        input{
+            padding: 10px;
+            border: none;
+            outline:none;
+            border-radius: 10px;
+            font-size: 15px;
+            width: 50%;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            outline: none;
+            width: 50%;
+            background-color: slateblue;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:hover{
+            background-color: cornflowerblue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box-nav">
+        <h1>EXERCÍCIO #02</h1>
+        <h2>Trabalho de Algoritmos</h2>
+    </div>
+    <div class="box">
+        <p>  Criar um algoritmo em JAVASCRIPT que leia o um número inteiro entre 1 e 7 e escreva o
+            dia da semana correspondente. Caso o usuário digite um número fora desse intervalo,
+            deverá aparecer uma mensagem informando que não existe dia da semana com esse
+            número. </p>
+        <input type="number" id='nmr' placeholder="Digite um número de 1 a 7"><br>
+        <br><br>
+            <button onclick="mostrarDia()">Enviar</button>
+        </div>
+    </div>
+</body>
+    <script>
+function mostrarDia() {
+    const numero = parseInt(document.getElementById('nmr').value);
+    let dia = "";
+
+    switch (numero) {
+        case 1:
+            dia = "Domingo";
+            break;
+        case 2:
+            dia = "Segunda-feira";
+            break;
+        case 3:
+            dia = "Terça-feira";
+            break;
+        case 4:
+            dia = "Quarta-feira";
+            break;
+        case 5:
+            dia = "Quinta-feira";
+            break;
+        case 6:
+            dia = "Sexta-feira";
+            break;
+        case 7:
+            dia = "Sábado";
+            break;
+        default:
+        alert("Não existe dia da semana com esse número.");
+        return;
+    }
+
+    alert("O dia da semana é: " + dia);
+} 
+</script>
+        </html>
